@@ -48,7 +48,7 @@
 // }
 ?>
 
-<body onload="preload()">
+<body>
 
     <noscript style="z-index: 99999!important; position: absolute; top: 0; width: 98%; padding: 3%;">
         <div class="alert alert-danger" role="alert">Essa Aplicação Web <b>requer</b> que o JavaScript esteja habilitado
