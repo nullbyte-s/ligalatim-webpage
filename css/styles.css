@@ -1228,21 +1228,24 @@ body {
 	}
 }
 
-@media (max-width: 992px) {
+@media (max-width: 956px) {
 	.card {
-		flex: 1 1 calc(50% - 20px)
+		flex: 1 1 calc(50% - 20px);
+		top: 8vh;
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 640px) {
 	.card {
 		flex: 1 1 100%;
-		max-width: 300px
+		max-width: 300px;
+		top: 20vh;
 	}
 }
 
 #child {
-	-webkit-transform: translateZ(-10px)
+	-webkit-transform: translateZ(-10px);
+	transform: translateZ(-10px)
 }
 
 #child:after {
@@ -1265,7 +1268,9 @@ body {
 	top: 10px;
 	left: 10px;
 	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 	-webkit-perspective: 1000px;
+	perspective: 1000px;
 	animation: turn 4s ease 0s 1 normal forwards;
 	margin: auto;
 	top: 20%
@@ -1277,6 +1282,7 @@ body {
 	width: 100%;
 	height: 100%;
 	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
 	background: radial-gradient(#38adbc, #227584, #5f5600);
 	border-radius: 50%
 }
@@ -1402,9 +1408,10 @@ div.card.show div.flap2 {
 
 div.cards {
 	animation: fade-in-cards 2s ease-in-out 2s forwards;
+	position: absolute;
 	justify-content: center;
 	margin: 80px auto;
-	margin-top: 400px;
+	margin-top: 19vh;
 	max-width: 960px;
 	opacity: 0;
 	text-align: center
@@ -1441,34 +1448,42 @@ div.flap2 {
 }
 
 #child1 {
+	transform: translateZ(0px);
 	-webkit-transform: translateZ(0px)
 }
 
 #child2 {
+	transform: translateZ(-5px);
 	-webkit-transform: translateZ(-5px)
 }
 
 #child3 {
+	transform: translateZ(-2px);
 	-webkit-transform: translateZ(-2px)
 }
 
 #child4 {
+	transform: translateZ(-8px);
 	-webkit-transform: translateZ(-8px)
 }
 
 #child5 {
+	transform: translateZ(-12px);
 	-webkit-transform: translateZ(-12px)
 }
 
 #child6 {
+	transform: translateZ(-14px);
 	-webkit-transform: translateZ(-14px)
 }
 
 #child7 {
+	transform: translateZ(-16px);
 	-webkit-transform: translateZ(-16px)
 }
 
 #child8 {
+	transform: translateZ(-18px);
 	-webkit-transform: translateZ(-18px)
 }
 
