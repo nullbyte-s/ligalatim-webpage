@@ -1,0 +1,31 @@
+# .htaccess para proteger o diretório de uploads
+
+# Evita o acesso direto a arquivos PHP no diretório
+<FilesMatch "\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Desativa o acesso direto a todos os arquivos e subdiretórios
+<Files *>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Permite o acesso a arquivos de imagem
+<FilesMatch "\.(jpg|jpeg|png|gif|bmp|webp)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Permite o acesso a arquivos CSS e JavaScript, se necessário
+<FilesMatch "\.(css|js)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+
+# Permite a execução de arquivos .htaccess
+<Files ~ "^\.ht">
+    Order Allow,Deny
+    Deny from all
+</Files>

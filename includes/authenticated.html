@@ -1,0 +1,38 @@
+<div class="wrapper d-flex flex-column min-vh-100">
+    <div class="flex-grow-1">
+        <section class="py-5">
+            <div class="container px-lg-5 navegationbar-scroll">
+                <div class="alert alert-light pt-1 rounded-3 text-center border-0 h-100 border-0 shadow-sm"
+                    style="background-color: rgba(251, 192, 114, 0.1);">
+                    <div class="m-3 m-lg-3">
+                        <h1 class="display-5 fw-bold">Painel do Usuário</h1><br>
+                        <div class="container" id="menuOptions">
+                        </div>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#confirmDeleteAccountModal"
+                            class="btn btn-outline-warning mt-5">
+                            <i class="bi bi-person-x"></i>&nbsp;Apagar Conta
+                        </button>&nbsp;
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="confirmDeleteAccountModal" class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirmar Exclusão</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Tem certeza de que deseja apagar a sua conta? Esta ação é irreversível.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"
+                            onclick="deleteUser()">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

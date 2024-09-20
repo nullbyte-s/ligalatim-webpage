@@ -1,0 +1,66 @@
+div.cards {
+	animation: fade-in-cards 2s ease-in-out 2s forwards;
+	margin: 25vh auto;
+	/* margin-top: 40vh; */
+	max-width: 960px;
+	opacity: 0;
+	text-align: center;
+	place-items: center;
+	display: block !important;
+}
+
+div.cards.showing div.card {
+	cursor: pointer;
+	opacity: .6;
+	transform: translate(0, 0) scale(0.88)
+}
+
+div.card:not([class*="mt-2"]) {
+	background: var(--bs-body-bg);
+	border: none;
+	cursor: pointer;
+	margin: 8px;
+	max-width: 300px;
+	perspective: 1000px;
+	position: relative;
+	text-align: left;
+	transition: all .3s ease-in;
+	width: 300px;
+	z-index: 1;
+	transform: translate(0, 0) scale(1);
+}
+
+div.card:not([class*="mt-2"]).show {
+	opacity: 1 !important;
+	transform: translate(0, -25%) scale(1) !important;
+}
+
+@media (max-width: 1199px) {
+	.card {
+		flex: 1 1 calc(50% - 20px);
+		top: 10vh;
+	}
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+	.card {
+		top: 25vh;
+	}
+}
+
+@media (max-height: 650px) and (orientation: portrait) {
+	.card {
+		top: 35vh;
+	}
+}
+
+@keyframes fade-in-cards {
+	from {
+		transform: translateY(30px)
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(-80%)
+	}
+}

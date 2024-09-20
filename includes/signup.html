@@ -1,0 +1,35 @@
+<div class="wrapper d-flex flex-column min-vh-100">
+  <div class="flex-grow-1">
+    <section class="py-5">
+      <div class="container px-lg-5">
+        <div class="alert alert-light pt-1 rounded-3 text-center border-0 h-100 border-0 shadow-sm"
+          style="background-color: rgba(251, 192, 114, 0.1);">
+          <div class="m-4 m-lg-4">
+            <h1 class="display-5 fw-bold">Cadastro</h1><br>
+            <div class="d-flex justify-content-center">
+              <form id="loginForm" class="login-container">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nome completo:</label>
+                  <input type="text" id="name" name="name" class="form-control max-width-input" required>
+                </div>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Usuário:</label>
+                  <input type="text" id="username" name="username" class="form-control max-width-input" required>
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Senha:</label>
+                  <input type="password" id="password" name="password" class="form-control max-width-input" required
+                    onkeydown="handleEnterKey(event, submitRegisterForm)">
+                </div>
+                <div class="d-grid gap-2 col-5 mx-auto">
+                  <button type="button" id="registerButton" onclick="submitRegisterForm()"
+                    class="btn btn-success">Cadastrar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

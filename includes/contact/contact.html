@@ -1,10 +1,10 @@
 <div class="wrapper d-flex flex-column min-vh-100">
   <div class="flex-grow-1">
     <section class="contact py-5">
-      <div class="container px-lg-5 main-content">
-        <div class="alert alert-light p-4 p-lg-5 rounded-3 text-center border-0 h-100 border-0 shadow-sm"
+      <div class="container px-lg-5">
+        <div class="alert alert-light pt-1 rounded-3 text-center border-0 h-100 border-0 shadow-sm"
           style="background-color: rgba(251, 192, 114, 0.1);">
-          <div class="m-4 m-lg-5">
+          <div class="m-4 m-lg-4">
             <h1 class="display-5 fw-bold">Contato</h1>
             <form class="fs-4" id="contactForm">
               <div class="row">
@@ -19,7 +19,9 @@
               </div>
               <div class="mb-3">
                 <label for="mensagem" class="form-label">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" class="form-control" required></textarea>
+                <textarea id="mensagem" name="mensagem" rows="4" class="form-control" maxlength="500"
+                  required></textarea>
+                <small id="charCount" class="form-text text-muted"></small>
               </div>
               <div class="d-grid gap-2 col-1 mx-auto">
                 <button type="button" id="sendButton" onclick="submitMessage()" class="btn btn-primary">Enviar</button>
